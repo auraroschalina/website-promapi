@@ -195,6 +195,7 @@ function e($value) {
                 padding: 18px;
             }
         }
+        
     </style>
 </head>
 
@@ -355,106 +356,137 @@ function e($value) {
 
         </form>
 
-        <!-- Tabel -->
-        <div class="table-responsive">
+       
+<!-- Tabel -->
+<div class="table-responsive">
 
-            <table class="table table-hover align-middle">
+    <table class="table table-hover align-middle">
 
-                <thead class="table-light">
+        <thead class="table-light">
+            <tr>
+                <th>No.</th>
+                <th>Anggota</th>
+                <th>Email</th>
+                <th>No. HP</th>
+                <th>Instansi</th>
+                <th>Pekerjaan</th>
+                <th>Status</th>
+                <th class="text-center">Aksi</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <?php if (count($anggota) > 0): ?>
+
+                <?php foreach ($anggota as $index => $row): ?>
+
                     <tr>
-                        <th>No.</th>
-                        <th>Anggota</th>
-                        <th>Email</th>
-                        <th>No. HP</th>
-                        <th>Instansi</th>
-                        <th>Pekerjaan</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
+                        <td><?= $index + 1 ?></td>
 
-                <tbody>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
 
-                    <?php if (count($anggota) > 0): ?>
-
-                        <?php foreach ($anggota as $index => $row): ?>
-
-                            <tr>
-                                <td><?= $index + 1 ?></td>
-
-                                <td>
-                                    <div class="d-flex align-items-center gap-2">
-
-                                        <?php if (!empty($row['foto'])): ?>
-                                            <img
-                                                src="<?= e('/promapi-website/' . ltrim($row['foto'], '/')) ?>"
-                                                class="member-photo"
-                                                alt="Foto anggota"
-                                            >
-                                        <?php else: ?>
-                                            <div class="member-photo bg-light d-flex align-items-center justify-content-center">
-                                                <i class="bi bi-person text-secondary"></i>
-                                            </div>
-                                        <?php endif; ?>
-
-                                        <div>
-    <a href="detail_anggota.php?id=<?= (int)$row['id'] ?>&from=manajemen"
-       class="fw-semibold text-decoration-none"
-       style="color:#0A1F44;">
-
-        <?= e($row['nama_lengkap']) ?>
-
-    </a>
-
-    <small class="text-muted d-block">
-        <?= e($row['nomor_anggota'] ?: 'Belum memiliki nomor') ?>
-    </small>
-</div>
-
+                                <?php if (!empty($row['foto'])): ?>
+                                    <img
+                                        src="<?= e('/promapi-website/' . ltrim($row['foto'], '/')) ?>"
+                                        class="member-photo"
+                                        alt="Foto anggota"
+                                    >
+                                <?php else: ?>
+                                    <div class="member-photo bg-light d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-person text-secondary"></i>
                                     </div>
-                                </td>
+                                <?php endif; ?>
 
-                                <td><?= e($row['email']) ?></td>
-                                <td><?= e($row['no_hp']) ?></td>
-                                <td><?= e($row['intansi']) ?></td>
-                                <td><?= e($row['pekerjaan']) ?></td>
+                                <div>
+                                    <a href="detail_anggota.php?id=<?= (int)$row['id'] ?>&from=manajemen"
+                                       class="fw-semibold text-decoration-none"
+                                       style="color:#0A1F44;">
+                                        <?= e($row['nama_lengkap']) ?>
+                                    </a>
 
-                                <td>
-                                    <?php
-                                    $warna = [
-                                        'aktif' => 'success',
-                                        'menunggu' => 'warning',
-                                        'ditolak' => 'danger'
-                                    ][$row['status']] ?? 'secondary';
-                                    ?>
+                                    <small class="text-muted d-block">
+                                        <?= e($row['nomor_anggota'] ?: 'Belum memiliki nomor') ?>
+                                    </small>
+                                </div>
 
-                                    <span class="badge text-bg-<?= $warna ?>">
-                                        <?= e(ucfirst($row['status'])) ?>
-                                    </span>
-                                </td>
-                            </tr>
+                            </div>
+                        </td>
 
-                        <?php endforeach; ?>
+                        <td><?= e($row['email']) ?></td>
+                        <td><?= e($row['no_hp']) ?></td>
+                        <td><?= e($row['intansi']) ?></td>
+                        <td><?= e($row['pekerjaan']) ?></td>
 
-                    <?php else: ?>
+                        <!-- Status -->
+                        <td>
+                            <?php
+                            $warna = [
+                                'aktif' => 'success',
+                                'menunggu' => 'warning',
+                                'ditolak' => 'danger'
+                            ][$row['status']] ?? 'secondary';
+                            ?>
 
-                        <tr>
-                            <td colspan="7" class="text-center py-5 text-muted">
-                                <i class="bi bi-inbox fs-2 d-block mb-2"></i>
-                                Data anggota tidak ditemukan.
-                            </td>
-                        </tr>
+                            <span class="badge text-bg-<?= $warna ?>">
+                                <?= e(ucfirst($row['status'])) ?>
+                            </span>
+                        </td>
 
-                    <?php endif; ?>
+                        <!-- Aksi -->
+                        <td class="text-nowrap text-center">
+                            <div class="d-flex justify-content-center align-items-center gap-2">
 
-                </tbody>
+                                <a href="edit_anggota.php?id=<?= (int)$row['id'] ?>"
+                                   class="btn btn-sm btn-warning"
+                                   title="Edit Anggota">
+                                    <i class="bi bi-pencil-square"></i>
+                                </a>
 
-            </table>
+                                <form action="hapus_anggota.php"
+                                      method="POST"
+                                      class="m-0"
+                                      onsubmit="return confirm('Apakah Anda yakin ingin menghapus anggota ini? Data yang dihapus tidak dapat dikembalikan.');">
 
-        </div>
+                                    <input type="hidden" name="id"
+                                           value="<?= (int)$row['id'] ?>">
 
-    </div>
+                                    <input type="hidden" name="csrf_token"
+                                           value="<?= e($_SESSION['csrf_token']) ?>">
 
+                                    <button type="submit"
+                                            class="btn btn-sm btn-danger"
+                                            title="Hapus Anggota">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+
+                                </form>
+
+                            </div>
+                        </td>
+
+                    </tr>
+
+                <?php endforeach; ?>
+
+            <?php else: ?>
+
+                <tr>
+                    <td colspan="8" class="text-center py-5 text-muted">
+                        <i class="bi bi-inbox fs-2 d-block mb-2"></i>
+                        Data anggota tidak ditemukan.
+                    </td>
+                </tr>
+
+            <?php endif; ?>
+
+        </tbody>
+
+    </table>
+
+</div>
+</div>
 </main>
-
 </body>
 </html>
