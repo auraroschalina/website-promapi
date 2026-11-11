@@ -382,10 +382,6 @@ body {
             <i class="bi bi-cash-stack"></i> Konfirmasi Pendaftaran
         </a>
 
-        <a class="menu-link" data-page="login">
-            <i class="bi bi-box-arrow-in-right"></i> Login
-        </a>
-
         <hr>
 
         <a href="index.html" class="menu-link">

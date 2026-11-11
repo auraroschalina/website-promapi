@@ -283,23 +283,68 @@ body {
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Buka navigasi">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-          <li class="nav-item"><a class="nav-link active" href="#beranda">Beranda</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#profil" role="button" data-bs-toggle="dropdown">Profil</a>
+      
+<div class="collapse navbar-collapse" id="mainNav">
+    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+
+        <li class="nav-item">
+            <a class="nav-link active" href="#beranda">Beranda</a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#profil"
+               role="button" data-bs-toggle="dropdown">
+                Profil
+            </a>
             <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="#tentang">Tentang Organisasi</a></li>
-              <li><a class="dropdown-item" href="#visi-misi">Visi, Misi & Tujuan</a></li>
-              <li><a class="dropdown-item" href="#struktur">Struktur Organisasi</a></li>
+                <li><a class="dropdown-item" href="#tentang">Tentang Organisasi</a></li>
+                <li><a class="dropdown-item" href="#visi-misi">Visi, Misi & Tujuan</a></li>
+                <li><a class="dropdown-item" href="#struktur">Struktur Organisasi</a></li>
             </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#berita">Berita</a></li>
-          <li class="nav-item"><a class="nav-link" href="#agenda">Agenda</a></li>
-          <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
-          <li class="nav-item ms-lg-2"><a class="btn btn-primary-nav" href="dashboard.php">Daftar <i class="bi bi-arrow-up-right"></i></a></li>
-        </ul>
-      </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#berita">Berita</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#agenda">Agenda</a>
+        </li>
+
+        <!-- Dropdown Publikasi -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="publikasi.php"
+               role="button" data-bs-toggle="dropdown">
+                Publikasi
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                    <a class="dropdown-item" href="publikasi.php?kategori=nasional">
+                        Jurnal Nasional
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="publikasi.php?kategori=internasional">
+                        Jurnal Internasional
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#galeri">Galeri</a>
+        </li>
+
+        <li class="nav-item ms-lg-2">
+            <a class="btn btn-primary-nav" href="dashboard.php">
+                Daftar <i class="bi bi-arrow-up-right"></i>
+            </a>
+        </li>
+
+    </ul>
+</div>
+
     </div>
   </nav>
 
@@ -751,19 +796,56 @@ body {
 </section>
 
 
-    <section class="section section-soft" id="galeri">
-      <div class="container">
-        <div class="section-heading-row"><div><span class="section-kicker">Dokumentasi aktivitas</span><h2 class="section-title">Galeri <span>PROMAPI</span></h2></div><span class="gallery-note">Pilih foto untuk memperbesar</span></div>
-        <div class="gallery-grid">
-          <button class="gallery-item gallery-one" data-title="Dokumentasi kegiatan 01" aria-label="Perbesar foto kegiatan 1"><span><i class="bi bi-arrows-fullscreen"></i></span></button>
-          <button class="gallery-item gallery-two" data-title="Dokumentasi kegiatan 02" aria-label="Perbesar foto kegiatan 2"><span><i class="bi bi-arrows-fullscreen"></i></span></button>
-          <button class="gallery-item gallery-three" data-title="Dokumentasi kegiatan 03" aria-label="Perbesar foto kegiatan 3"><span><i class="bi bi-arrows-fullscreen"></i></span></button>
-          <button class="gallery-item gallery-four" data-title="Dokumentasi kegiatan 04" aria-label="Perbesar foto kegiatan 4"><span><i class="bi bi-arrows-fullscreen"></i></span></button>
-          <button class="gallery-item gallery-five" data-title="Dokumentasi kegiatan 05" aria-label="Perbesar foto kegiatan 5"><span><i class="bi bi-arrows-fullscreen"></i></span></button>
+  <section class="section section-soft" id="galeri">
+    <div class="container">
+        <div class="section-heading-row">
+            <div>
+                <span class="section-kicker">Dokumentasi aktivitas</span>
+                <h2 class="section-title">Galeri <span>PROMAPI</span></h2>
+            </div>
+            <span class="gallery-note">Pilih foto untuk memperbesar</span>
         </div>
-      </div>
-    </section>
 
+        <div class="gallery-grid">
+
+            <button class="gallery-item gallery-one"
+                style="background-image: url('assets/foto1.jpeg'); background-size: cover; background-position: center;"
+                data-title="Dokumentasi kegiatan 01"
+                aria-label="Perbesar foto kegiatan 1">
+                <span><i class="bi bi-arrows-fullscreen"></i></span>
+            </button>
+
+            <button class="gallery-item gallery-two"
+                style="background-image: url('assets/foto2.jpeg'); background-size: cover; background-position: center;"
+                data-title="Dokumentasi kegiatan 02"
+                aria-label="Perbesar foto kegiatan 2">
+                <span><i class="bi bi-arrows-fullscreen"></i></span>
+            </button>
+
+            <button class="gallery-item gallery-three"
+                style="background-image: url('assets/foto3.jpeg'); background-size: cover; background-position: center;"
+                data-title="Dokumentasi kegiatan 03"
+                aria-label="Perbesar foto kegiatan 3">
+                <span><i class="bi bi-arrows-fullscreen"></i></span>
+            </button>
+
+            <button class="gallery-item gallery-four"
+                style="background-image: url('assets/foto4.jpeg'); background-size: cover; background-position: center;"
+                data-title="Dokumentasi kegiatan 04"
+                aria-label="Perbesar foto kegiatan 4">
+                <span><i class="bi bi-arrows-fullscreen"></i></span>
+            </button>
+
+            <button class="gallery-item gallery-five"
+                style="background-image: url('assets/foto5.jpeg'); background-size: cover; background-position: center;"
+                data-title="Dokumentasi kegiatan 05"
+                aria-label="Perbesar foto kegiatan 5">
+                <span><i class="bi bi-arrows-fullscreen"></i></span>
+            </button>
+
+        </div>
+    </div>
+</section>
     <section class="join-section" id="daftar">
       <div class="container">
         <div class="join-panel">
@@ -887,7 +969,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-  <!-- Script untuk mengambil berita dari database -->
+ 
+<!-- Script untuk mengambil berita dari database -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -940,14 +1023,30 @@ document.addEventListener("DOMContentLoaded", function () {
                 linkFoto.href = detailUrl;
                 linkFoto.className = "news-image";
 
+                linkFoto.style.display = "block";
+                linkFoto.style.width = "100%";
+                linkFoto.style.height = "256px";
+                linkFoto.style.position = "relative";
+                linkFoto.style.overflow = "hidden";
+                linkFoto.style.padding = "0";
+
                 const foto = document.createElement("img");
                 foto.src = berita.gambar;
                 foto.alt = berita.judul;
+
+                foto.style.display = "block";
+                foto.style.width = "100%";
+                foto.style.height = "100%";
+                foto.style.objectFit = "cover";
+                foto.style.objectPosition = "center";
+                foto.style.maxWidth = "none";
+                foto.style.transform = "none";
 
                 const label = document.createElement("span");
                 label.textContent = berita.kategori.toUpperCase();
 
                 foto.onerror = function () {
+                    console.error("Gambar gagal dimuat:", berita.gambar);
                     this.style.display = "none";
                 };
 

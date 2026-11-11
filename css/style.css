@@ -68,5 +68,28 @@
   .hero-mark {
     height: 320px;
   }
-  
+  .gallery-one {
+    background-image: url('../assets/foto1.jpeg');
+}
+
+.gallery-two {
+    background-image: url('../assets/foto2.jpeg');
+}
+
+.gallery-three {
+    background-image: url('../assets/foto3.jpeg');
+}
+
+.gallery-four {
+    background-image: url('../assets/foto4.jpeg');
+}
+
+.gallery-five {
+    background-image: url('../assets/foto5.jpeg');
+}
+  .gallery-item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 }
