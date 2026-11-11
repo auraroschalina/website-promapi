@@ -292,7 +292,6 @@ body {
               <li><a class="dropdown-item" href="#tentang">Tentang Organisasi</a></li>
               <li><a class="dropdown-item" href="#visi-misi">Visi, Misi & Tujuan</a></li>
               <li><a class="dropdown-item" href="#struktur">Struktur Organisasi</a></li>
-              <li><a class="dropdown-item" href="#sejarah">Sejarah</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="#berita">Berita</a></li>
@@ -343,27 +342,48 @@ body {
   </div>
 </header>
 
-    <section class="section section-soft" id="tentang">
-      <div class="container">
-        <div class="section-heading text-center">
-          <h2>TENTANG <span> KAMI</span></h2>
-        </div>
-        <div class="row align-items-center g-5">
-          <div class="col-lg-6">
-            <div class="about-visual">
-              <div class="about-symbol"><i class="bi bi-buildings"></i></div>
-              <div class="decor decor-a"></div><div class="decor decor-b"></div>
+  <section class="section py-5 position-relative overflow-hidden" id="tentang" style="background-color: #f8f9fa;">
+  <!-- Elemen Dekorasi Abstrak di Background -->
+  <div class="position-absolute rounded-circle opacity-5" style="width: 250px; height: 250px; background-color: #ffc107; bottom: -50px; right: -50px; z-index: 0;"></div>
+
+  <div class="container position-relative" style="z-index: 1;">
+    <!-- Heading Section -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold display-6" style="color: #0d1b2a;">Tentang <span style="color: #ffc107; /* atau warna kuning gelap */ color: #ffc107;">PROMAPI</span></h2>
+      <div class="mx-auto mt-2" style="width: 50px; height: 3px; background-color: #ffc107; border-radius: 2px;"></div>
+    </div>
+
+    <div class="row align-items-center g-5">
+      <!-- Kolom Kiri: Foto dengan Efek Card Berkelas -->
+      <div class="col-lg-6">
+        <div class="position-relative p-3 bg-white shadow-lg rounded-4 border-0" style="transform: rotate(-1deg); transition: transform 0.3s ease;" onmouseover="this.style.transform='rotate(0deg)'" onmouseout="this.style.transform='rotate(-1deg)'">
+          <div class="rounded-3 overflow-hidden position-relative" style="height: 380px;">
+            <img src="assets/profil.jpeg" alt="Profil PROMAPI" class="w-100 h-100" style="object-fit: cover; filter: brightness(0.95);">
+            <!-- Overlay Label kecil di dalam foto -->
+            <div class="position-absolute bottom-0 start-0 end-0 p-3 text-white" style="background: linear-gradient(to top, rgba(13,27,42,0.8), transparent);">
+              <span class="small fw-semibold"><i class="bi bi-geo-alt-fill text-warning me-1"></i> Berkedudukan di Kota Bandung, Jawa Barat</span>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <h3 class="content-title">Profil PROMAPI</h3>
-            <p class="body-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-            <p class="body-copy">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Curabitur vitae nunc sed velit dignissim.</p>
-            <a href="#visi-misi" class="text-link">Selengkapnya tentang PROMAPI <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- Kolom Kanan: Teks Profil & Poin Interaktif -->
+      <div class="col-lg-6 ps-lg-4">
+        <h3 class="fw-bold mb-3" style="color: #0d1b2a; font-size: 1.75rem;">Profil Singkat PROMAPI</h3>
+        <p class="text-secondary mb-4" style="line-height: 1.8;">
+          Perkumpulan Profesi Administrator dan Manajer Pendidikan Indonesia (PROMAPI) merupakan organisasi profesi yang bersifat nonpemerintah dan independen, berkedudukan di Kota Bandung. PROMAPI hadir sebagai wadah strategis bagi para profesional untuk membangun kolaborasi, meningkatkan kompetensi, serta mengembangkan mutu pengelolaan pendidikan di Indonesia.
+        </p>
+
+        <!-- Tombol Aksi -->
+        <div>
+          <a href="#visi-misi" class="btn btn-dark px-4 py-2 rounded-pill fw-semibold shadow-sm text-decoration-none d-inline-flex align-items-center" style="background-color: #0d1b2a; transition: all 0.3s;">
+            Selengkapnya tentang PROMAPI <i class="bi bi-arrow-right ms-2 text-warning"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="visi-misi">
   <div class="container">
@@ -462,9 +482,16 @@ body {
   </div>
 </section>
 
-<section class="section section-soft" id="struktur">
-  <div class="container">
+<section class="section section-soft position-relative overflow-hidden" id="struktur" style="background-color: #fcfdfd;">
+  
+  <!-- HIASAN SISI KIRI & KANAN (Elemen Abstrak & Minimalis) -->
+  <!-- Hiasan Kiri Atas (Lingkaran Kuning Transparan) -->
+  <div class="position-absolute rounded-circle opacity-10" style="width: 220px; height: 220px; background-color: #ffc107; top: 50px; left: -80px; z-index: 0; filter: blur(20px);"></div>
+  
+  <!-- Hiasan Kiri Bawah (Pola Titik/Dots Minimalis) -->
+  <div class="position-absolute opacity-15 d-none d-lg-block" style="width: 120px; height: 120px; bottom: 30px; left: 40px; z-index: 0; background-image: radial-gradient(#0d1b2a 2px, transparent 2px); background-size: 16px 16px;"></div>
 
+  <!-- Hiasan Kanan Bawah (Lingkaran Navy Halus) -->
     <div class="section-heading text-center">
       <h2>Struktur <span>Organisasi PROMAPI</span></h2>
       <p>Susunan kepengurusan Perkumpulan Profesi Manajer dan Administrator Pendidikan.</p>
@@ -606,7 +633,7 @@ body {
 
         <div class="org-field">
           <div class="org-person">
-            <img src="assets/foto-pengurus/wilayah.jpg" alt="Pengurus Bidang Organisasi">
+            <img src="assets/foto-pengurus/wilayah.jpg" alt="Pengurus Wilayah">
             <div class="org-info">
               <span>Pengurus Wilayah</span>
               <strong>Nama Koordinator</strong>
@@ -616,7 +643,7 @@ body {
 
         <div class="org-field">
           <div class="org-person">
-            <img src="assets/foto-pengurus/daerah.jpg" alt="Pengurus Bidang Kaderisasi">
+            <img src="assets/foto-pengurus/daerah.jpg" alt="Pengurus Daerah">
             <div class="org-info">
               <span>Pengurus Daerah</span>
               <strong>Nama Koordinator</strong>
@@ -629,43 +656,100 @@ body {
   </div>
 </section>
 
+<section class="section py-5" id="kata-sambutan">
+  <div class="container">
+    <!-- 1. Judul Utama di Tengah -->
+    <div class="mb-5 text-center">
+      <span class="section-kicker d-inline-block mb-2">Pimpinan Organisasi</span>
+      <h2 class="section-title fw-bold" style="color: #0d1b2a;">Kata Sambutan</h2>
+      <div class="mx-auto mt-2" style="width: 60px; height: 4px; background-color: #ffc107; border-radius: 2px;"></div>
+    </div>
 
-    <section class="section" id="sejarah">
-      <div class="container">
-        <div class="row g-5 align-items-center">
-          <div class="col-lg-5"><span class="section-kicker">Perjalanan organisasi</span><h2 class="section-title">Sejarah <span>PROMAPI</span></h2><p class="body-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Berikut gambaran linimasa perjalanan organisasi yang dapat disesuaikan.</p></div>
-          <div class="col-lg-7">
-            <div class="timeline">
-              <div class="timeline-item"><span class="timeline-year">20XX</span><div><h4>Awal pembentukan</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div></div>
-              <div class="timeline-item"><span class="timeline-year">20XX</span><div><h4>Penguatan organisasi</h4><p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div>
-              <div class="timeline-item"><span class="timeline-year">20XX</span><div><h4>Pengembangan jejaring</h4><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p></div></div>
-            </div>
+    <!-- 2. Card dengan Background Navy (#0d1b2a) dan Teks Putih -->
+    <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5 position-relative overflow-hidden" style="background-color: #0d1b2a; border-top: 5px solid #ffc107 !important;">
+      <!-- Aksen Kutipan Transparan di Latar Belakang -->
+      <div class="position-absolute text-warning opacity-10 d-none d-md-block" style="top: 20px; right: 30px; font-size: 6rem; line-height: 1;">
+        <i class="bi bi-quote"></i>
+      </div>
+
+      <div class="row align-items-center g-4 g-lg-5">
+        <!-- Foto Pembina (Sebelah Kiri) -->
+        <div class="col-md-4 text-center">
+          <!-- Placeholder Foto Lingkaran Besar (180px x 180px) dengan Border Kuning -->      
+          <img src="assets/fotopembina.jpeg" alt="Pembina PROMAPI" class="rounded-circle shadow-lg mb-3 border border-3 border-warning" style="width: 180px; height: 180px; object-fit: cover;">
+      
+          <h4 class="fw-bold mb-1 text-white">Prof. Dr. Hj. Aan Komariah, M.Pd</h4>
+          <span class="text-warning small fs-6 fw-semibold">Pembina PROMAPI</span>
+        </div>
+
+        <!-- Kutipan / Isi Sambutan (Sebelah Kanan - Teks Putih) -->
+        <div class="col-md-8">
+          <div class="quote-content text-light position-relative" style="line-height: 1.8; font-size: 1.05rem;">
+            <p class="mb-3">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Selamat datang di platform resmi PROMAPI. Organisasi ini hadir sebagai wadah strategis untuk menyatukan dan mengembangkan potensi para administrator serta manajer pendidikan di seluruh nusantara."
+            </p>
+            <p class="mb-0">
+              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mari bersama-sama kita wujudkan sistem pendidikan nasional yang lebih efektif, efisien, unggul, dan berdaya saing global."
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="section section-soft" id="berita">
-      <div class="container">
-        <div class="section-heading-row"><div><span class="section-kicker">Kabar terbaru</span><h2 class="section-title">Berita <span>PROMAPI</span></h2></div><a href="#berita" class="text-link">Semua berita <i class="bi bi-arrow-right"></i></a></div>
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-4"><article class="news-card"><a href="#" class="news-image image-one" aria-label="Baca berita"><span>BERITA ORGANISASI</span></a><div class="news-content"><div class="news-meta"><span>12 Oktober 20XX</span><span>•</span><span>Organisasi</span></div><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3><p>Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus...</p><a href="#" class="read-more">Baca selengkapnya <i class="bi bi-arrow-right"></i></a></div></article></div>
-          <div class="col-md-6 col-lg-4"><article class="news-card"><a href="#" class="news-image image-two" aria-label="Baca berita"><span>KEGIATAN</span></a><div class="news-content"><div class="news-meta"><span>08 Oktober 20XX</span><span>•</span><span>Kegiatan</span></div><h3><a href="#">Sed ut perspiciatis unde omnis iste natus error</a></h3><p>At vero eos et accusamus et iusto odio dignissimos ducimus...</p><a href="#" class="read-more">Baca selengkapnya <i class="bi bi-arrow-right"></i></a></div></article></div>
-          <div class="col-md-6 col-lg-4"><article class="news-card"><a href="#" class="news-image image-three" aria-label="Baca berita"><span>INFORMASI</span></a><div class="news-content"><div class="news-meta"><span>01 Oktober 20XX</span><span>•</span><span>Informasi</span></div><h3><a href="#">Nemo enim ipsam voluptatem quia voluptas sit</a></h3><p>Temporibus autem quibusdam et aut officiis debitis...</p><a href="#" class="read-more">Baca selengkapnya <i class="bi bi-arrow-right"></i></a></div></article></div>
-        </div>
-      </div>
-    </section>
+   
+<section class="section section-soft" id="berita">
+    <div class="container">
 
-    <section class="section" id="agenda">
-      <div class="container">
-        <div class="section-heading-row"><div><span class="section-kicker">Catat tanggalnya</span><h2 class="section-title">Agenda <span>Kegiatan</span></h2></div><a href="#agenda" class="text-link">Lihat semua agenda <i class="bi bi-arrow-right"></i></a></div>
-        <div class="row g-3">
-          <div class="col-lg-4"><div class="agenda-card"><div class="agenda-date"><strong>18</strong><span>NOV</span></div><div class="agenda-info"><span class="agenda-type">WEBINAR</span><h3>Lorem ipsum dolor sit amet</h3><p><i class="bi bi-clock"></i> 09.00 – 12.00 WIB</p><p><i class="bi bi-geo-alt"></i> Online / Zoom Meeting</p><a href="#daftar">Detail agenda <i class="bi bi-arrow-right"></i></a></div></div></div>
-          <div class="col-lg-4"><div class="agenda-card"><div class="agenda-date"><strong>25</strong><span>NOV</span></div><div class="agenda-info"><span class="agenda-type">DISKUSI</span><h3>Consectetur adipiscing elit</h3><p><i class="bi bi-clock"></i> 13.00 – 15.00 WIB</p><p><i class="bi bi-geo-alt"></i> Lokasi kegiatan</p><a href="#daftar">Detail agenda <i class="bi bi-arrow-right"></i></a></div></div></div>
-          <div class="col-lg-4"><div class="agenda-card"><div class="agenda-date"><strong>02</strong><span>DES</span></div><div class="agenda-info"><span class="agenda-type">PERTEMUAN</span><h3>Ut enim ad minim veniam</h3><p><i class="bi bi-clock"></i> 08.30 – selesai</p><p><i class="bi bi-geo-alt"></i> Lokasi kegiatan</p><a href="#daftar">Detail agenda <i class="bi bi-arrow-right"></i></a></div></div></div>
+        <div class="section-heading-row">
+            <div>
+                <span class="section-kicker">Kabar terbaru</span>
+                <h2 class="section-title">Berita <span>PROMAPI</span></h2>
+            </div>
+
+           
         </div>
-      </div>
-    </section>
+
+        <!-- Daftar berita otomatis dari database -->
+        <div class="row g-4" id="daftarBerita">
+
+            <div class="col-12 text-center py-4">
+                <p>Memuat berita terbaru...</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="section position-relative overflow-hidden" id="agenda" style="background-color: #ffffff;">
+    
+   <!-- Ornamen Kotak Miring di Kiri Atas -->
+<div class="position-absolute opacity-5 rounded-4 d-none d-lg-block" style="width: 140px; height: 140px; background-color: #ffc107; top: 20px; left: -50px; z-index: 0; transform: rotate(45deg);"></div>
+
+<!-- Ornamen Kotak Miring di Kanan Bawah -->
+<div class="position-absolute opacity-5 rounded-4 d-none d-lg-block" style="width: 160px; height: 160px; background-color: #0d1b2a; bottom: 10px; right: -60px; z-index: 0; transform: rotate(30deg);"></div>
+    <!-- KONTEN UTAMA (Struktur Asli Dipertahankan) -->
+    <div class="container position-relative" style="z-index: 1;">
+
+        <div class="section-heading-row">
+            <div>
+                <span class="section-kicker">Catat tanggalnya</span>
+                <h2 class="section-title">Agenda <span>Kegiatan</span></h2>
+            </div>
+        </div>
+
+        <div class="row g-3" id="daftarAgenda">
+            <div class="col-12 text-center py-4">
+                <p>Memuat agenda kegiatan...</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 
     <section class="section section-soft" id="galeri">
       <div class="container">
@@ -683,7 +767,7 @@ body {
     <section class="join-section" id="daftar">
       <div class="container">
         <div class="join-panel">
-          <div><span class="section-kicker">Jadi bagian dari perubahan</span><h2>Mari tumbuh dan berkontribusi <span>bersama PROMAPI.</span></h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bergabunglah dalam jejaring profesi manajer dan administrator pendidikan.</p></div>
+          <div><span class="section-kicker">Jadi bagian dari perubahan</span><h2>Mari tumbuh dan berkontribusi <span>bersama PROMAPI.</span></h2></div>
           <a href="dashboard.php" class="btn btn-yellow btn-lg">
     Daftar Anggota <i class="bi bi-arrow-up-right ms-2"></i></a>
       </div>
@@ -693,8 +777,8 @@ body {
   <footer class="site-footer">
     <div class="container">
       <div class="row g-4">
-        <div class="col-lg-5"><a class="footer-brand" href="#beranda"><img src="assets/logo-promapi.png" alt=""><span>PROMAPI</span></a><p class="footer-description">Perkumpulan Profesi Manajer dan Administrator Pendidikan. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><div class="social-links"><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></div></div>
-        <div class="col-6 col-lg-2"><h4>Navigasi</h4><a href="#tentang">Tentang</a><a href="#visi-misi">Visi & Misi</a><a href="#struktur">Struktur</a><a href="#sejarah">Sejarah</a></div>
+        <div class="col-lg-5"><a class="footer-brand" href="#beranda"><img src="assets/logo-promapi.png" alt=""><span>PROMAPI</span></a><p class="footer-description">Perkumpulan Profesi Manajer dan Administrator Pendidikan</p><div class="social-links"><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></div></div>
+        <div class="col-6 col-lg-2"><h4>Navigasi</h4><a href="#tentang">Tentang</a><a href="#visi-misi">Visi & Misi</a><a href="#struktur">Struktur</a></div>
         <div class="col-6 col-lg-2"><h4>Informasi</h4><a href="#berita">Berita</a><a href="#agenda">Agenda</a><a href="#galeri">Galeri</a><a href="#daftar">Pendaftaran</a></div>
         <div class="col-lg-3"><h4>Hubungi Kami</h4><p><i class="bi bi-envelope"></i> sekretariat@promapi.or.id</p><p><i class="bi bi-geo-alt"></i> Alamat sekretariat organisasi</p></div>
       </div>
@@ -706,5 +790,215 @@ body {
   <button id="backToTop" class="back-to-top" aria-label="Kembali ke atas"><i class="bi bi-arrow-up"></i></button>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const container = document.getElementById("daftarAgenda");
+
+    if (!container) return;
+
+    fetch("api_agenda.php")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Gagal mengambil data agenda.");
+            }
+            return response.json();
+        })
+        .then(data => {
+
+            container.innerHTML = "";
+
+            if (!Array.isArray(data) || data.length === 0) {
+                container.innerHTML = `
+                    <div class="col-12 text-center py-4">
+                        <p>Belum ada agenda kegiatan yang tersedia.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            data.slice(0, 3).forEach(agenda => {
+
+                const tanggal = new Date(agenda.tanggal + "T00:00:00");
+
+                const tanggalAngka = String(tanggal.getDate()).padStart(2, "0");
+
+                const namaBulan = [
+                    "JAN", "FEB", "MAR", "APR",
+                    "MEI", "JUN", "JUL", "AGU",
+                    "SEP", "OKT", "NOV", "DES"
+                ];
+
+                const bulan = namaBulan[tanggal.getMonth()];
+
+                const formatTeks = value => {
+                    const div = document.createElement("div");
+                    div.textContent = value || "-";
+                    return div.innerHTML;
+                };
+
+                const kartu = document.createElement("div");
+                kartu.className = "col-lg-4";
+
+                kartu.innerHTML = `
+                    <div class="agenda-card">
+                        <div class="agenda-date">
+                            <strong>${tanggalAngka}</strong>
+                            <span>${bulan}</span>
+                        </div>
+
+                        <div class="agenda-info">
+                            <span class="agenda-type">
+                                ${formatTeks(agenda.jenis)}
+                            </span>
+
+                            <h3>${formatTeks(agenda.judul)}</h3>
+
+                            <p>
+                                <i class="bi bi-clock"></i>
+                                ${formatTeks(agenda.waktu)}
+                            </p>
+
+                            <p>
+                                <i class="bi bi-geo-alt"></i>
+                                ${formatTeks(agenda.lokasi)}
+                            </p>
+
+                        
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(kartu);
+            });
+
+        })
+        .catch(error => {
+            console.error(error);
+
+            container.innerHTML = `
+                <div class="col-12 text-center py-4">
+                    <p>Agenda kegiatan gagal dimuat.</p>
+                </div>
+            `;
+        });
+
+});
+</script>
+
+  <!-- Script untuk mengambil berita dari database -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const container = document.getElementById("daftarBerita");
+
+    if (!container) return;
+
+    fetch("api_berita.php")
+        .then(function (response) {
+            if (!response.ok) {
+                throw new Error("Gagal mengambil data berita.");
+            }
+            return response.json();
+        })
+        .then(function (data) {
+
+            container.innerHTML = "";
+
+            if (!Array.isArray(data) || data.length === 0) {
+                container.innerHTML = `
+                    <div class="col-12 text-center py-4">
+                        <p>Belum ada berita yang diterbitkan.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            data.slice(0, 3).forEach(function (berita) {
+
+                const tanggal = new Date(
+                    berita.tanggal_publikasi + "T00:00:00"
+                ).toLocaleDateString("id-ID", {
+                    day: "2-digit",
+                    month: "long",
+                    year: "numeric"
+                });
+
+                const detailUrl =
+                    "detail_berita.php?id=" +
+                    encodeURIComponent(berita.id);
+
+                const kolom = document.createElement("div");
+                kolom.className = "col-md-6 col-lg-4";
+
+                const kartu = document.createElement("article");
+                kartu.className = "news-card";
+
+                // Foto berita
+                const linkFoto = document.createElement("a");
+                linkFoto.href = detailUrl;
+                linkFoto.className = "news-image";
+
+                const foto = document.createElement("img");
+                foto.src = berita.gambar;
+                foto.alt = berita.judul;
+
+                const label = document.createElement("span");
+                label.textContent = berita.kategori.toUpperCase();
+
+                foto.onerror = function () {
+                    this.style.display = "none";
+                };
+
+                linkFoto.append(foto, label);
+
+                // Isi kartu berita
+                const konten = document.createElement("div");
+                konten.className = "news-content";
+
+                const meta = document.createElement("div");
+                meta.className = "news-meta";
+                meta.textContent = tanggal + " • " + berita.kategori;
+
+                const judul = document.createElement("h3");
+                const linkJudul = document.createElement("a");
+                linkJudul.href = detailUrl;
+                linkJudul.textContent = berita.judul;
+                judul.appendChild(linkJudul);
+
+                const ringkasan = document.createElement("p");
+                ringkasan.textContent = berita.ringkasan;
+
+                const baca = document.createElement("a");
+                baca.href = detailUrl;
+                baca.className = "read-more";
+                baca.textContent = "Baca selengkapnya ";
+
+                const ikon = document.createElement("i");
+                ikon.className = "bi bi-arrow-right";
+                baca.appendChild(ikon);
+
+                konten.append(meta, judul, ringkasan, baca);
+                kartu.append(linkFoto, konten);
+                kolom.appendChild(kartu);
+
+                container.appendChild(kolom);
+
+            });
+
+        })
+        .catch(function (error) {
+            console.error("Kesalahan berita:", error);
+
+            container.innerHTML = `
+                <div class="col-12 text-center py-4">
+                    <p>Berita gagal dimuat. Silakan coba kembali.</p>
+                </div>
+            `;
+        });
+
+});
+</script>
 </body>
 </html>

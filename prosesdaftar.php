@@ -35,15 +35,15 @@ if (
 $nama = trim($_POST['nama_lengkap'] ?? '');
 $tempat_lahir = trim($_POST['tempat_lahir'] ?? '');
 $tanggal_lahir = trim($_POST['tanggal_lahir'] ?? '');
-$alamat = trim($_POST['alamat_tempat_tinggal'] ?? '');
+$alamat_tempat_tinggal = trim($_POST['alamat_tempat_tinggal'] ?? '');
 $provinsi = trim($_POST['provinsi'] ?? '');
 $kabupaten_kota = trim($_POST['kabupaten_kota'] ?? '');
 $kecamatan = trim($_POST['kecamatan'] ?? '');
 $kelurahan = trim($_POST['kelurahan'] ?? '');
 $no_hp = trim($_POST['no_hp'] ?? '');
 $email = trim($_POST['email'] ?? '');
-$jabatan = trim($_POST['pekerjaan'] ?? '');
-$tempat_kerja = trim($_POST['intansi'] ?? '');
+$pekerjaan = trim($_POST['pekerjaan'] ?? '');
+$intansi = trim($_POST['intansi'] ?? '');
 $pendidikan = $_POST['pendidikan'] ?? [];
 
 // Validasi data wajib

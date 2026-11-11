@@ -286,16 +286,26 @@ function e($value) {
         <h5 class="mt-3 fw-bold">PROMAPI</h5>
     </div>
 
-    <a href="dashboard_admin.php">
+    <a href="dashboard_admin.php" >
         <i class="bi bi-grid me-2"></i> Dashboard
-    </a>
-
-    <a href="manajemen_anggota.php">
-        <i class="bi bi-people me-2"></i> Manajemen Anggota
     </a>
 
     <a href="konfirmasi_pendaftaran.php" class="active">
         <i class="bi bi-person-check me-2"></i> Konfirmasi Pendaftaran
+    </a>
+    
+    <a href="manajemen_anggota.php">
+        <i class="bi bi-people me-2"></i> Manajemen Anggota
+    </a>
+
+
+    
+    <a href="manajemen_berita.php">
+        <i class="bi bi-newspaper me-2"></i> Manajemen Berita
+    </a>
+
+    <a href="manajemen_agenda.php" >
+        <i class="bi bi-calendar-event me-2"></i> Manajemen Agenda
     </a>
 
     <hr>
@@ -307,6 +317,7 @@ function e($value) {
     <a href="logout_admin.php">
         <i class="bi bi-box-arrow-right me-2"></i> Logout
     </a>
+
 
 </aside>
 
